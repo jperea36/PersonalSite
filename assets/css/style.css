@@ -1,6 +1,7 @@
 /* ============================================
    Tokens
    ============================================ */
+   
 :root {
   --paper: #faf9f5;
   --ink: #1c1e1b;
@@ -28,6 +29,12 @@ body {
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+  height: 100%;
 }
 
 a {
@@ -43,6 +50,7 @@ img { max-width: 100%; display: block; }
    Contour rule — a quiet nod to topo/hydro maps,
    used sparingly as a section divider
    ============================================ */
+   
 .contour {
   width: 100%;
   height: 14px;
@@ -56,16 +64,20 @@ img { max-width: 100%; display: block; }
 /* ============================================
    Layout shell
    ============================================ */
+
 .wrap {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 3rem 1.5rem 5rem;
+  flex: 1;
 }
 
 header.site {
   border-bottom: 1px solid var(--line);
   margin-bottom: 2.5rem;
+  background-color: antiquewhite;
 }
+
 header.site .wrap {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
@@ -86,11 +98,13 @@ header.site .wrap {
 .site-title a { color: var(--ink); text-decoration: none; }
 
 nav.site-nav { display: flex; gap: 1.25rem; }
+
 nav.site-nav a {
   font-size: 0.95rem;
   color: var(--ink-soft);
   text-decoration: none;
 }
+
 nav.site-nav a:hover, nav.site-nav a[aria-current="page"] {
   color: var(--moss-deep);
 }
@@ -98,14 +112,18 @@ nav.site-nav a:hover, nav.site-nav a[aria-current="page"] {
 /* ============================================
    Typography
    ============================================ */
+
 h1, h2, h3 {
   font-family: var(--serif);
   font-weight: normal;
   line-height: 1.25;
   color: var(--ink);
 }
+
 h1 { font-size: 2.1rem; margin: 0 0 0.5rem; }
+
 h2 { font-size: 1.5rem; margin: 0 0 0.75rem; }
+
 h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
 
 .lede {
@@ -124,6 +142,10 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
    ============================================ */
 .intro { margin-bottom: 1rem; }
 
+.intro-title {
+  text-decoration: underline;
+}
+
 .section-grid {
   display: grid;
   gap: var(--gap);
@@ -134,8 +156,11 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
   background: var(--card);
   padding: 1.5rem;
 }
+
 .section-card h2 { margin-bottom: 0.4rem; }
+
 .section-card p { color: var(--ink-soft); margin: 0 0 1rem; }
+
 .section-card .enter {
   font-size: 0.95rem;
   font-weight: 600;
@@ -148,6 +173,7 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
 /* ============================================
    Listing pages (reviews / writing / projects index)
    ============================================ */
+
 .item-list {
   list-style: none;
   margin: 0;
@@ -155,26 +181,33 @@ h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
   display: flex;
   flex-direction: column;
 }
+
 .item-list li {
   padding: 1.1rem 0;
   border-bottom: 1px solid var(--line);
 }
+
 .item-list li:first-child { padding-top: 0; }
+
 .item-list a.item-title {
   font-family: var(--serif);
   font-size: 1.15rem;
   text-decoration: none;
   color: var(--ink);
 }
+
 .item-list a.item-title:hover { color: var(--moss-deep); }
+
 .item-list .meta { margin-top: 0.2rem; }
 
 /* ============================================
    Single item pages
    ============================================ */
+
 .back-link { font-size: 0.9rem; }
 
 article.item header { margin-bottom: 1.75rem; }
+
 article.item .meta { margin-bottom: 0.25rem; }
 
 .rating {
@@ -186,10 +219,13 @@ article.item .meta { margin-bottom: 0.25rem; }
 /* ============================================
    Footer
    ============================================ */
+
 footer.site {
   border-top: 1px solid var(--line);
   margin-top: 3rem;
+  background-color: antiquewhite;
 }
+
 footer.site .wrap {
   padding-top: 1.5rem;
   padding-bottom: 2rem;
